@@ -63,7 +63,7 @@ li.listClass:not(:last-child){
 }
 
 .removeMe{
-	background-color:#42cb29;
+	background-color:red;
 	cursor:pointer;
 }
 
