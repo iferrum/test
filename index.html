@@ -1,18 +1,34 @@
 <html>
-<head>
-<title>
-  First Website
-</title>
-</head>
-<body>
-<h1>This is my first github page</h1>
-</body>
+	<head>
+		<title>
+			
+		</title>
+		<link rel = "stylesheet" type = "text/css" href = "meTodo.css">
+	</head>
+	<body>
+		<div id = "Container">
+			<div id= "header">
+				<h1>My TO-Do LiSt</h1>
+				
+			</div>
+			<p> enter a list of tasks to do and clear completed ones</p>
+			<div id="Tbody">
+				<input type = "text" id="tasks" placeholder = "...Add task...">
 
-<style>
-  body{
-    background-color:green;
-    color:white;
-    text-allign:center;
-  }
-</style>
+				<button id = "addBtn"  > <b>AddTask</b></button>
+				<button id = "remAll"><b><strong>DeleteAll</strong></b></button>
+
+			</div>
+			<div id = "listt">
+				<ul id = "MyTasks">
+
+				</ul>	
+			</div>
+
+			
+		</div>
+		<script src = "meTodo.js">
+			
+		</script>
+	</body>
 </html>
