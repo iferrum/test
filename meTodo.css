@@ -1,11 +1,15 @@
 body{
-	background: url("pic2.jpg");
+	background: url(Wallmax-4764.png);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    
 }
 #container{
 	width:40%;
-	height:500px;
+	height:90%;
 	position:relative;
-	background-color:rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.5);
 	margin: 0 auto;
 	border-radius: 5px;
 }
@@ -32,7 +36,7 @@ body{
 #listt{
 	position:absolute;
 	bottom: 50px;
-	top:210px;
+	top:150px;
 	left:0;
 	right:0;
 	overflow: scroll;
@@ -44,17 +48,22 @@ ul#MyTasks{
 
 li.listClass{
 	list-style-type: none;
-	font-family: courier;
+	font-family: kristen ITC;
 	font-size: 1.2em;
 	color:white;
 	padding: 7px 0;
 	transition: all 0.1s ease-in-out;
-	-webkit-transition:all 0.1s ease-in-out;
-	-moz-transition: all 0.1s ease-in-out;
+	    -webkit-transition:all 0.1s ease-in-out;
+	        -moz-transition: all 0.1s ease-in-out;
 }
 
 li.listClass:hover{
 	background-color:rgba(100,100,100,0.5);
+}
+
+li.listClass:hover .removeMe {
+	visibility: visible;
+	opacity: 1;
 }
 
 li.listClass:not(:last-child){
@@ -63,12 +72,26 @@ li.listClass:not(:last-child){
 }
 
 .removeMe{
-	background-color:red;
 	cursor:pointer;
+    float: right;
+	color: white;
+	background: rgba(0,0,0,0);
+	font-size: 16px;
+	font-weight: bold;
+	border: 1px solid white;
+	border-radius: 50%;
+	padding: 10px 5px;
+	visibility: hidden;
+	opacity: 0;
+	line-height: 0;
+	margin-right: 5px;
+	transition: all 0.1s ease-in-out;
+		-webkit-transition: all 0.1s ease-in-out;
+			-moz-transition: all 0.1s ease-in-out;
 }
 
 .removeMe:hover{
-	color:red;
+	background-color: red;
 }
 
 #remAll{
@@ -102,6 +125,71 @@ li.listClass:not(:last-child){
 }
 
 p{
-	color:yellow;
+    opacity: 1.2;
+	color:green;
 	font-size: 25px;
 }
+
+input.taskCheckbox {
+	position: relative;
+	float: left;
+	margin-right: 10px;
+	-webkit-appearance: none;
+	width: 15px;
+	height: 15px;
+	border: 1px solid white;
+	border-radius: 5px;
+	outline: none;
+	margin-left: 5px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+		-webkit-transition: all 0.1s ease-in-out;
+			-moz-transition: all 0.1s ease-in-out;
+}
+
+input.taskCheckbox:checked {
+	background-color: #009925;
+}
+
+input.taskCheckbox:checked:after {
+	color: white;
+	content: "\2713";
+	display: block;
+	font-size: 12px;
+	height: 12px;
+	position: absolute;
+	width: 12px;
+	left: 0.5px;
+	bottom: 2px;
+}
+
+input.taskCheckbox:checked + ul#MyTasks{
+    font-style :italic;
+    color: grey;
+}
+
+.removeMe{
+    visibility: hidden;
+}
+
+li.listClass:hover .removeMe {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
